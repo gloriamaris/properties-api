@@ -1,4 +1,6 @@
-const Query = `
+import { gql } from 'apollo-server-express';
+
+const Query = gql`
  extend type Query {
    properties: [Property]
  }

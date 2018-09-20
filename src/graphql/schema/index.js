@@ -1,9 +1,9 @@
 import fs from 'fs';
 import path from 'path';
-import { ApolloServer } from 'apollo-server-express';
+import { ApolloServer, gql } from 'apollo-server-express';
 import { merge } from 'lodash';
 
-const Query = `
+const Query = gql`
  type Query {
    status: String
  }

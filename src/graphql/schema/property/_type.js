@@ -1,4 +1,6 @@
-const Property = `
+import { gql } from 'apollo-server-express';
+
+const Property = gql`
   type Property {
     id: String!,
     street: String!,
