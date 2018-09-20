@@ -2,6 +2,12 @@
 import express from 'express';
 import cors from 'cors';
 
+// GraphQL - Apollo
+import apollo from './graphql';
+
+// Config
+import config from './config';
+
 const app = express();
 
 function setPort(port = 5000) {
@@ -24,6 +30,9 @@ app.use(cors({
 app.get('/status', (req, res) => {
  res.send({ status: 'App is running' });
 });
+
+// Wrap app with Apollo
+apollo(app);
 
 export default {
  getApp: () => app,
