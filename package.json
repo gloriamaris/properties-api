@@ -1,0 +1,26 @@
+{
+  "name": "properties-api",
+  "version": "1.0.0",
+  "description": "Properties API",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/gloriamaris/properties-api.git"
+  },
+  "author": "Monique Dingding",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/gloriamaris/properties-api/issues"
+  },
+  "homepage": "https://github.com/gloriamaris/properties-api#readme",
+  "dependencies": {
+    "@babel/cli": "^7.1.0",
+    "@babel/core": "^7.1.0",
+    "@babel/node": "^7.0.0",
+    "@babel/preset-env": "^7.1.0",
+    "@babel/register": "^7.0.0"
+  }
+}
