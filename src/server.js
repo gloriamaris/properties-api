@@ -8,6 +8,7 @@ import apollo from './graphql';
 // Config
 import config from './config';
 
+require('dotenv').config();
 const app = express();
 
 function setPort(port = 5000) {
@@ -28,7 +29,7 @@ app.use(cors({
 
 // Utility endpoint to check API status
 app.get('/status', (req, res) => {
- res.send({ status: 'App is running' });
+ res.send({ status: 'App is running' + process.env.DATABASE_URL });
 });
 
 // Wrap app with Apollo

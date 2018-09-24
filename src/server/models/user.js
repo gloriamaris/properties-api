@@ -1,7 +1,11 @@
 'use strict';
 module.exports = (sequelize, DataTypes) => {
   const User = sequelize.define('User', {
-    id: DataTypes.STRING,
+    id: {
+      type: DataTypes.UUID,
+      primaryKey: true,
+      defaultValue: DataTypes.UUIDV4
+    },
     firstName: DataTypes.STRING,
     lastName: DataTypes.STRING
   }, {});
