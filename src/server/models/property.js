@@ -6,6 +6,13 @@ module.exports = (sequelize, DataTypes) => {
       primaryKey: true,
       defaultValue: DataTypes.UUIDV4
     },
+    user_id: {
+      type: DataTypes.UUID,
+      references: {
+        model: 'User',
+        key: 'id'
+      }
+    },
     street: DataTypes.STRING,
     city: DataTypes.STRING,
     state: DataTypes.STRING,
@@ -14,6 +21,7 @@ module.exports = (sequelize, DataTypes) => {
   }, {});
   Property.associate = function(models) {
     // associations can be defined here
+    Property.belongsTo(models.User, { foreignKey: 'user_id' });
   };
   return Property;
 };

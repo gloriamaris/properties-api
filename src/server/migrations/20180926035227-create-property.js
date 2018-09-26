@@ -8,6 +8,13 @@ module.exports = {
         defaultValue: Sequelize.literal('uuid_generate_v4()'),
         type: Sequelize.UUID
       },
+      user_id: {
+        type: Sequelize.UUID,
+        references: {
+          model: 'Users',
+          key: 'id'
+        }
+      },
       street: {
         type: Sequelize.STRING
       },
