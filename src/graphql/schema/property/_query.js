@@ -11,10 +11,7 @@ export const queryTypes = () => [Query];
 
 export const queryResolvers = {
  Query: {
-   /**
-    * TODO:
-    * Database logic for retrieving properties
-    */
+   // Retrieve properties
    properties: () => {
      return models.Property.all()
         .then((properties) => {
