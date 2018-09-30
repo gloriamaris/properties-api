@@ -1,5 +1,4 @@
 # properties-api
-In fulfillment of Onerent Coding Challenge.
 Properties API built using Node, Postgres and GraphQL.
 
 ## Setup
